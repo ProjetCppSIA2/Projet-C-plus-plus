@@ -1,5 +1,3 @@
-Voici un exemple de fichier **README.md** que vous pouvez inclure dans votre repository GitHub pour guider votre équipe sur les commandes à utiliser pour lier leur machine au repository et collaborer efficacement.
-
 ---
 
 # **Instructions pour travailler avec le repository**
@@ -22,33 +20,33 @@ Pour obtenir une copie locale du projet :
 1. Accédez à l'URL du repository GitHub.
 2. Copiez le lien HTTPS ou SSH.
 3. Dans un terminal, exécutez :
-
+   ```bash
    git clone <URL_DU_REPOSITORY>
-
+   ```
    Par exemple :
-
+   ```bash
    git clone https://github.com/votre_nom_utilisateur/Projet-C.git
-
+   ```
 4. Accédez au dossier cloné :
-
+   ```bash
    cd Projet-C
-
+   ```
 
 ---
 
-## **3. Configuration initiale**   (Je ne sais pas si c'est utile)
+## **3. Configuration initiale**
 ### **3.1 Configurer votre identité Git**
 Ces informations seront associées à vos commits :
-
+```bash
 git config --global user.name "VotreNom"
 git config --global user.email "VotreEmail@exemple.com"
-
+```
 
 ### **3.2 Vérifier le lien avec le repository GitHub**
 Pour vérifier que votre projet est bien connecté :
-
+```bash
 git remote -v
-
+```
 Vous devez voir une ligne indiquant l’URL du repository GitHub.
 
 ---
@@ -56,49 +54,49 @@ Vous devez voir une ligne indiquant l’URL du repository GitHub.
 ## **4. Travailler sur le projet**
 ### **4.1 Mettre à jour votre copie locale**
 Avant de commencer à travailler, assurez-vous d’avoir la dernière version du code :
-
+```bash
 git pull
-
+```
 
 ### **4.2 Ajouter de nouvelles modifications**
 Après avoir fait des modifications dans vos fichiers :
 1. Vérifiez les fichiers modifiés :
-
+   ```bash
    git status
-
+   ```
 2. Ajoutez les fichiers au suivi :
-
+   ```bash
    git add .
-
+   ```
 3. Faites un commit avec un message clair décrivant les changements :
-
+   ```bash
    git commit -m "Description de vos modifications"
-
+   ```
 
 ### **4.3 Envoyer les modifications sur GitHub**
-Poussez vos changements vers le repository distant (le mieux est de travailler sur une branche spécial de son propre travail les commande de branche son juste après) :
-
+Poussez vos changements vers le repository distant :
+```bash
 git push
-
+```
 
 ---
 
 ## **5. Créer et utiliser des branches**
 Pour travailler sur une nouvelle fonctionnalité ou correction de bug, créez une branche séparée :
 1. Créez une nouvelle branche :
-
+   ```bash
    git checkout -b nom_de_la_branche
-
+   ```
 2. Faites vos modifications, ajoutez, et commitez comme d’habitude.
 3. Envoyez votre branche sur GitHub :
-
+   ```bash
    git push -u origin nom_de_la_branche
-
+   ```
 
 Pour revenir à la branche principale (`main`) :
-
+```bash
 git checkout main
-
+```
 
 ---
 
@@ -106,13 +104,13 @@ git checkout main
 En cas de conflit lors d’un `git pull` ou `git merge` :
 1. Git indiquera les fichiers en conflit. Ouvrez ces fichiers pour résoudre les différences manuellement.
 2. Une fois les conflits résolus, ajoutez les fichiers corrigés :
-
+   ```bash
    git add fichier_conflit
-
+   ```
 3. Terminez le merge avec un commit :
-
+   ```bash
    git commit -m "Conflit résolu"
-
+   ```
 
 ---
 
